@@ -17,7 +17,7 @@ public class StartSelenium {
     }
     @Test
     public void test(){
-        //Old strategies 
+        //Old strategies
         wd.findElement(By.tagName("a"));
         wd.findElement(By.cssSelector("a"));
 
