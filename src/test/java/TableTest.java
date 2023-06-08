@@ -18,6 +18,7 @@ public class TableTest {
     @Test
     public void testCss(){
         wd.findElement(By.cssSelector("#customers tr:nth-child(7) td:last-child"));
+        
 
     }
 
