@@ -32,6 +32,8 @@ public class TableTest {
         int countRows = elements1.toArray().length;
         System.out.println(countRows);
 
+       // System.out.println(wd.findElements(By.cssSelector("#customers td:first-child")).size());
+
         WebElement row3= wd.findElement(By.cssSelector("#customers tr:nth-child(4)"));
         System.out.println(row3.getText());
         WebElement lastColumn = wd.findElement(By.cssSelector("#customers th:last-child"));
