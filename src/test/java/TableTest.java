@@ -24,19 +24,14 @@ public class TableTest {
     public void testCss(){
         wd.findElement(By.cssSelector("#customers tr:nth-child(7) td:last-child"));
 
-        List<WebElement> elements = wd.findElements(By.cssSelector("#customers th"));
-        int countColumns = elements.toArray().length;
-        System.out.println(countColumns);
-
-        List<WebElement>elements1 = wd.findElements(By.cssSelector("#customers td:first-child"));
-        int countRows = elements1.toArray().length;
-        System.out.println(countRows);
+        System.out.println(wd.findElements(By.cssSelector("#customers th")).size());
+        System.out.println(wd.findElements(By.cssSelector("#customers tr")).size());
 
        // System.out.println(wd.findElements(By.cssSelector("#customers td:first-child")).size());
 
-        WebElement row3= wd.findElement(By.cssSelector("#customers tr:nth-child(4)"));
+        WebElement row3= wd.findElement(By.cssSelector("#customers tr:nth-child(3)"));
         System.out.println(row3.getText());
-        WebElement lastColumn = wd.findElement(By.cssSelector("#customers th:last-child"));
+        WebElement lastColumn = wd.findElement(By.cssSelector("#customers td:last-child"));
         System.out.println(lastColumn.getText());
 
 
@@ -46,6 +41,7 @@ public class TableTest {
 
     @AfterMethod
     public void tearDown(){
-       wd.quit();
+
+        wd.quit();
     }
 }
